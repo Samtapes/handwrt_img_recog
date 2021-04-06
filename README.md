@@ -1,2 +1,2 @@
 # handwrt_img_recog
-Deep learning model made using Pytorch
+Deep learning model to recognize handwriting made using Pytorch
