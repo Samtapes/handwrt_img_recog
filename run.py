@@ -21,41 +21,31 @@ dataset = MNIST('image_cla_lr/data', train=False, transform=Transforms.ToTensor(
 
 
 
-# MODEL
+## MODEL
+model = nn.Sequential(
+  nn.Conv2d(1, 16, kernel_size=3, stride=1, padding=1),
+  nn.ReLU(),
+  nn.AvgPool2d(2,2), # bc, 16, 14, 14 
 
-# All the pixels of the image that are going to enter in the model
-input_size = 28 * 28
+  nn.Conv2d(16, 32, kernel_size=3, stride=1, padding=1),
+  nn.ReLU(),
+  nn.AvgPool2d(2,2), # bc, 32, 7, 7
 
-# All the propalities from 0 to 9
-num_classes = 10
+  nn.Conv2d(32, 64, kernel_size=3, stride=1, padding=1),
+  nn.ReLU(),
+  nn.AvgPool2d(2,2), # bc, 64, 3.5, 3.5
 
+  nn.Conv2d(64, 128, kernel_size=3, stride=1, padding=1),
+  nn.ReLU(),
+  nn.AvgPool2d(2,2),
 
-# The model
-class MnistModel(nn.Module):
+  nn.Flatten(),
+  nn.Linear(128, 10)
+)
 
-  # initing the module
-  def __init__(self):
-    super().__init__()
-
-    # Model
-    self.linear = nn.Linear(input_size, num_classes)
-  
-  # Insert data in the model
-  def forward(self, xb):
-
-    # Reshaping image matrix
-    xb = xb.reshape(-1, input_size)
-
-    # Inserting it in the model
-    out = self.linear(xb)
-    return out
-
-
-# Seting the model
-model = MnistModel()
 
 # Loading the trained model
-model.load_state_dict(torch.load('image_cla_lr/models/model4'))
+model.load_state_dict(torch.load('image_cla_lr/models/model6'))
 
 # Setting the model for evaluation mode
 model.eval()
@@ -105,6 +95,7 @@ test_loader = DataLoader(test_dataset, batch_size, True)
 # Function to make predictions
 def test(model, test_loader):
   for xb, yb in test_loader:
+    xb = xb.unsqueeze(0)
     out = model(xb)
     _, pred = torch.max(out, 1)
     print(pred[0], yb[0])
