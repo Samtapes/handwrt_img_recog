@@ -2,5 +2,5 @@ data
 notes.txt
 tests
 
-models/model7
-models/model8
+**/model7
+**/model8
