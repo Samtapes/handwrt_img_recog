@@ -8,7 +8,7 @@ Libraries used:
 
 # Testing this machine learning program
 
-![alt text](https://ibb.co/4JmxTWJ)
+![alt text](https://i.ibb.co/wY01WyY/5.png)
 
 To test this program you have to:
 
@@ -20,4 +20,4 @@ To test this program you have to:
 - Run the 'run.py' in the terminal: run.py
 - Then just type the image full name ex: '7.png'
 
-![alt text](https://ibb.co/809pfcG)
+![alt text](https://i.ibb.co/2ydQCNR/7.png)
