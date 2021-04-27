@@ -17,5 +17,5 @@ To test this program you have to:
 - Create 'images' folder
 - Drawn a white number with black background with 28x28 pixels (I recommend to use the Paint)
 - Save the number as 'your_number.png'. ex: '9.png'
-- Run the 'run.py' in the terminal: run.py
+- Run the 'run.py' inside the main folder in the terminal: python run.py
 - Then just type the image full name ex: '7.png'
