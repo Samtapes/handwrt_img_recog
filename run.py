@@ -19,7 +19,7 @@ from skimage import io
 
 
 # Importing test dataset
-dataset = MNIST('image_cla_lr/data', train=False, transform=Transforms.ToTensor())
+dataset = MNIST('data', train=False, transform=Transforms.ToTensor())
 
 
 
@@ -90,7 +90,7 @@ model = wdr22()
 
 
 # Loading the trained model
-model.load_state_dict(torch.load('image_cla_lr/models/model8'))
+model.load_state_dict(torch.load('models/model8'))
 
 # Setting the model for evaluation mode
 model.eval()
@@ -101,7 +101,7 @@ model.eval()
 img_name = input("IMAGE NAME: ")
 
 # Importing image
-img1 = io.imread('image_cla_lr/data/images/' + str(img_name), as_gray=True)
+img1 = io.imread('data/images/' + str(img_name), as_gray=True)
 
 # Converting the image to a matrix
 input_img_data = np.array(img1)
