@@ -98,7 +98,7 @@ model.eval()
 
 
 
-img_name = '7.png'
+img_name = input("IMAGE NAME: ")
 
 # Importing image
 img1 = io.imread('image_cla_lr/data/images/' + str(img_name), as_gray=True)
@@ -138,7 +138,6 @@ batch_size = 1
 test_dataset = TensorDataset(input_img_data, input_img_label)
 test_loader = DataLoader(test_dataset, batch_size, True)
 # test_loader = DataLoader(dataset, batch_size, True)
-
 
 
 
