@@ -6,9 +6,9 @@ Libraries used:
 - PyTorch
 - NumPy
 
-# Testing this machine learning program
+![alt text](https://i.ibb.co/2ydQCNR/7.png) ![alt text](https://i.ibb.co/wY01WyY/5.png)
 
-![alt text](https://i.ibb.co/wY01WyY/5.png)
+# Testing this machine learning program
 
 To test this program you have to:
 
@@ -19,5 +19,3 @@ To test this program you have to:
 - Save the number as 'your_number.png'. ex: '9.png'
 - Run the 'run.py' in the terminal: run.py
 - Then just type the image full name ex: '7.png'
-
-![alt text](https://i.ibb.co/2ydQCNR/7.png)
